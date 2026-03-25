@@ -24,12 +24,12 @@ class StationRenamer extends GSController {
 
     // Backup templates in case of name conflicts, include original name for reference
 	backup_templates = {
-        train = "[{code}] {name}",
-        airport = "[{code}] {name} Airport",
-        dock = "[{code}] {name} Dock",
-        bus = "[{code}] B-{num}",
-        tram = "[{code}] T-{num}",
-        truck = "[{code}] F-{num}"
+        train = "{town}",
+        airport = "{town} Airport",
+        dock = "{town} Dock",
+        bus = "{town} S{num}",
+        tram = "{town} T{num}",
+        truck = "{town} S{num}"
     };
 
     function Start() {
