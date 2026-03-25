@@ -19,7 +19,7 @@ class StationRenamer extends GSController {
         dock = "{town} Dock",
         bus = "{town} S{num}",
         tram = "{town} T{num}",
-        truck = "{town} S{num}"
+        truck = "{town} M{num}"
     };
 
     // Backup templates in case of name conflicts, include original name for reference
@@ -29,7 +29,7 @@ class StationRenamer extends GSController {
         dock = "{town} Dock",
         bus = "{town} S{num}",
         tram = "{town} T{num}",
-        truck = "{town} S{num}"
+        truck = "{town} M{num}"
     };
 
     function Start() {
@@ -128,8 +128,8 @@ class StationRenamer extends GSController {
 
     // Pad a number with leading zeros to ensure it is at least 3 digits long
     function PadNumber(num) {
-        if (num < 10) return "00" + num;
-        if (num < 100) return "0" + num;
+        if (num < 10) return "0" + num;
+        if (num < 100) return "" + num;
         return num.tostring();
     }
 
