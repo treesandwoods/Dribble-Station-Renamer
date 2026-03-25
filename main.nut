@@ -14,12 +14,12 @@ class StationRenamer extends GSController {
 
     // Name templates for different station types
     name_templates = {
-        train = "[{code}] {town}",
-        airport = "[{code}] {town} Airport",
-        dock = "[{code}] {town} Dock",
-        bus = "[{code}] B-{num}",
-        tram = "[{code}] T-{num}",
-        truck = "[{code}] F-{num}"
+        train = "{town}",
+        airport = "{town} Airport",
+        dock = "{town} Dock",
+        bus = "{town} S{num}",
+        tram = "{town} T{num}",
+        truck = "{town} S{num}"
     };
 
     // Backup templates in case of name conflicts, include original name for reference
