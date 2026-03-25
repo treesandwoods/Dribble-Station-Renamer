@@ -14,7 +14,7 @@ class StationRenamer extends GSInfo {
 			name = "TownCodeLength",
 			description = "Number of letters used for town codes when renaming stations",
 			min_value = 2,
-			max_value = 5,
+			max_value = 6,
 			easy_value = 3,
 			medium_value = 3,
 			hard_value = 3,
